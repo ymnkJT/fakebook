@@ -14,24 +14,26 @@
       <header>
         <nav class="navbar navbar-default">
           <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-              <img alt="Brand" src="...">
-            </a>
+            <div class="row">
+              <a href="/topics">FakeBook</a>
 
-            <div class="input-group">
-              <input type="text" class="form-control" placeholder="Find friends">
-              <span class="input-group-btn">
-                <button class="btn btn-default" type="button">Go!</button>
-              </span>
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Find friends">
+                <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">Go!</button>
+                </span>
+              </div>
+
+              <div class="list col-md-5 col-sm-12 col-xs-12">
+                <li><%= link_to "user name", "#" %></li>
+                <li><%= link_to "Home", "#" %></li>
+                <li><%= link_to "Find Friends", "#" %></li>
+                <li><%= link_to "", "#",
+                  class: 'glyphicon glyphicon-user' %></li>
+                <li><%= link_to "", "#",
+                  class: 'glyphicon glyphicon-comment' %></li>
+              </div>
             </div>
-
-            <li><%= link_to "user name", "#" %></li>
-            <li><%= link_to "Home", "#" %></li>
-            <li><%= link_to "Find Friends", "#" %></li>
-            <li><%= link_to "", "#",
-                 class: 'glyphicon glyphicon-user' %></li>
-            <li><%= link_to "", "#",
-                 class: 'glyphicon glyphicon-comment' %></li>
           </div>
         </nav>
       </header>

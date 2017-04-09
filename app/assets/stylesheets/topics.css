@@ -3,3 +3,36 @@
   src: url('/assets/glyphicons-halflings-regular.eot');
   src: url('/assets/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('/assets/glyphicons-halflings-regular.woff') format('woff'), url('/assets/glyphicons-halflings-regular.ttf') format('truetype'), url('/assets/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
 }
+
+html,body {
+  height: 100%;
+  background-color: #EEEEEE;
+}
+
+header a {
+  color: white;
+  float: left;
+  line-height: 40px;
+  margin-right: 20px;
+}
+
+li {
+  list-style-type: none;
+  float: left;
+}
+
+/*overwrite*/
+.navbar-default {
+  background-color: #0066CC;
+  padding: 10px;
+}
+
+.input-group {
+  width: 40%;
+  float: left;
+  margin-right: 5%;
+}
+
+.glyphicon {
+  line-height: 40px;
+}
