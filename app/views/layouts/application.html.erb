@@ -25,7 +25,16 @@
               </div>
 
               <div class="list col-md-5 col-sm-12 col-xs-12">
-                <li><%= link_to "user name", "#" %></li>
+                <% if user_signed_in? %>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" >user name <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <%= link_to "ログアウト", "#" %>
+                    </ul>
+                  </li>
+                <% elsif %>
+                  <li><%= link_to "ログイン", new_user_session_path %></li>
+                <% end %>
                 <li><%= link_to "ホーム", root_path %></li>
                 <li><%= link_to "友達を検索", "#" %></li>
                 <li><%= link_to "", "#",
