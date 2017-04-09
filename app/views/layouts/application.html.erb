@@ -29,7 +29,8 @@
                   <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" >user name <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                      <%= link_to "ユーザー設定", edit_user_registration_path, class: "black_font" %>
+                      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "black_font"%>
                     </ul>
                   </li>
                 <% elsif %>

@@ -46,3 +46,7 @@ li {
 .field, .actions {
   margin: 20px;
 }
+
+.black_font {
+  color: black;
+}
