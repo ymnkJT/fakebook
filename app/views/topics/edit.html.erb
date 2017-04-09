@@ -4,6 +4,13 @@
       <p><%= notice %></p>
 
       <%= form_for(@topic) do |f| %>
+        <% if @topic.errors.any? %>
+          <ul>
+          <% @topic.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        <% end %>
         <%= f.text_field :content, class: 'form-control', placeholder: "今なにしてる？" %>
         <%= f.submit "投稿する", class: "btn btn-primary btn-block" %>
       <% end %>

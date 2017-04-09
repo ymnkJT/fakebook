@@ -7,21 +7,28 @@ class TopicsController < ApplicationController
   end
 
   def create
-    Topic.create(topics_params)
-    redirect_to topics_path
+    @topic = Topic.new(topics_params)
+    if @topic.save
+      redirect_to topics_path, notice: "投稿しました！"
+    else
+      redirect_to topics_path, notice: "エラー：投稿の内容を入力して下さい"
+    end
   end
 
   def edit
   end
 
   def update
-    @topic.update(topics_params)
-    redirect_to topics_path
+    if @topic.update(topics_params)
+      redirect_to topics_path, notice: "更新しました！"
+    else
+      render :edit
+    end
   end
 
   def destroy
     @topic.destroy
-    redirect_to topics_path
+    redirect_to topics_path, notice: "削除しました！"
   end
 
   private
