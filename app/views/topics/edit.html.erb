@@ -7,14 +7,6 @@
         <%= f.text_field :content, class: 'form-control', placeholder: "今なにしてる？" %>
         <%= f.submit "投稿する", class: "btn btn-primary btn-block" %>
       <% end %>
-
-      <% @topics.each do |topic| %>
-        <div class="topic_index">
-          <p><%= topic.content %></p>
-          <p><%= topic.created_at %></p>
-          <!-- user name and time -->
-        </div>
-      <% end %>
     </div>
   </div>
 </div>
