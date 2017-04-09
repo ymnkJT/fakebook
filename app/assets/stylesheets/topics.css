@@ -6,7 +6,7 @@
 
 html,body {
   height: 100%;
-  background-color: #EEEEEE;
+  background-color: #DDDDDD;
 }
 
 header a {
@@ -39,6 +39,10 @@ li {
 /**/
 
 .topic_index {
-  background-color: white;
+  background-color: #EEEEEE;
   margin-top: 20px;
+}
+
+.field, .actions {
+  margin: 20px;
 }
