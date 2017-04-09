@@ -9,12 +9,13 @@
       <% end %>
 
       <% @topics.each do |topic| %>
-        <div class="row">
+        <div class="topic_index">
+          <p><%= topic.content %></p>
+          <p><%= topic.created_at %></p>
+          <!-- user name and time -->
           <%= link_to topic_path(topic) do %>
             <h4><strong>see more</strong></h4>
           <% end %>
-          <p><%= topic.content %></p>
-          <!-- user name and time -->
         </div>
       <% end %>
     </div>

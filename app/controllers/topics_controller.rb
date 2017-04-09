@@ -5,6 +5,8 @@ class TopicsController < ApplicationController
   end
 
   def create
+    Topic.create(topics_params)
+    redirect_to topics_path
   end
 
   def edit
@@ -15,4 +17,9 @@ class TopicsController < ApplicationController
 
   def destroy
   end
+
+  private
+    def topics_params
+      params.require(:topic).permit(:content)
+    end
 end

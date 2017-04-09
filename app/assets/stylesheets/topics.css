@@ -23,7 +23,7 @@ li {
 
 /*overwrite*/
 .navbar-default {
-  background-color: #0066CC;
+  background-color: #336699;
   padding: 10px;
 }
 
@@ -35,4 +35,10 @@ li {
 
 .glyphicon {
   line-height: 40px;
+}
+/**/
+
+.topic_index {
+  background-color: white;
+  margin-top: 20px;
 }
