@@ -1,1 +1,22 @@
-<h1>テスト画面</h1>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2 col-sm-10">
+      <p><%= notice %></p>
+
+      <%= form_for(@topic) do |f| %>
+        <%= f.text_field :content %>
+        <%= f.submit %>
+      <% end %>
+
+      <% @topics.each do |topic| %>
+        <div class="row">
+          <%= link_to topic_path(topic) do %>
+            <h4><strong>see more</strong></h4>
+          <% end %>
+          <p><%= topic.content %></p>
+          <!-- user name and time -->
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
