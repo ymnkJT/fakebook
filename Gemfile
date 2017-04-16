@@ -15,6 +15,10 @@ group :development, :test do
   gem 'spring'
 end
 
+group :development do
+  gem 'letter_opener_web'
+end
+
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
