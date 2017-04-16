@@ -27,7 +27,7 @@
               <div class="list col-md-5 col-sm-12 col-xs-12">
                 <% if user_signed_in? %>
                   <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" >user name <span class="caret"></span></a>
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" ><%= current_user.name %><span class="caret"></span></a>
                     <ul class="dropdown-menu">
                       <%= link_to "ユーザー設定", edit_user_registration_path, class: "black_font" %>
                       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "black_font"%>
