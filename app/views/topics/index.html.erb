@@ -21,8 +21,7 @@
       <% @topics.each do |topic| %>
         <div class="topic_index">
           <p><%= topic.content %></p>
-          <p><%= topic.created_at %></p>
-          <!-- user name and time -->
+          <p><%= topic.created_at %> (by <%= topic.user.name %>)</p>
           <% if topic.user == current_user %>
             <%= link_to "編集", edit_topic_path(topic.id) %>
             <%= link_to "削除", topic_path(topic.id), method: :delete, data: { confirm: '本当に削除しますか？' } %>
