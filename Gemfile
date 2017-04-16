@@ -19,6 +19,8 @@ group :development do
   gem 'letter_opener_web'
 end
 
+gem 'rails_12factor', group: :production
+
 gem 'therubyracer'
 gem 'less-rails'
 gem 'twitter-bootstrap-rails'
