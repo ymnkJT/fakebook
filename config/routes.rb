@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'relationships/create'
+
+  get 'relationships/destroy'
+
   root 'topics#index'
   devise_for :users, controllers: {
     registrations: "users/registrations",
@@ -9,6 +13,9 @@ Rails.application.routes.draw do
     resources :comments
     post :confirm, on: :collection
   end
+
+  resources :users, only: [:index]
+  resources :relationships, only: [:create, :destroy]
 
   if Rails.env.development?
     mount LetterOpenerWeb::Engine, at: "/letter_opener"
