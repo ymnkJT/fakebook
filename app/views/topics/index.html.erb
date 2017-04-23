@@ -20,6 +20,7 @@
 
       <% @topics.each do |topic| %>
         <div class="topic_index">
+          <p class="prof_img"><%= profile_img(topic.user) if profile_img(topic.user) %></p>
           <p><%= topic.content %></p>
           <p><%= topic.created_at %> (by <%= topic.user.name %>)</p>
           <% if topic.user == current_user %>
