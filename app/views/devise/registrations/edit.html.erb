@@ -14,24 +14,31 @@
         <%= f.email_field :email, autofocus: true, class: "form-control" %>
       </div>
 
-      <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-        <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+      <% if @user.provider.blank? %>
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="field">
+          <i>(変更がない場合は空白にして下さい)</i><br />
+          <%= f.password_field :password, autocomplete: "off", placeholder: "パスワード", class: "form-control" %>
+        </div>
+
+        <div class="field">
+          <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "パスワード再入力",class: "form-control" %>
+        </div>
+
+        <div class="field">
+          <i>(更新確認のため、現在のパスワードを入力して下さい)</i><br />
+          <%= f.password_field :current_password, autocomplete: "off", placeholder: "現在のパスワード", class: "form-control" %>
+        </div>
       <% end %>
 
       <div class="field">
-        <i>(変更がない場合は空白にして下さい)</i><br />
-        <%= f.password_field :password, autocomplete: "off", placeholder: "パスワード", class: "form-control" %>
+        <%= profile_img(@user) if profile_img(@user) %>
+        <%= f.file_field :avatar %>
+        <%= f.hidden_field :avatar_cache %>
       </div>
-
-      <div class="field">
-        <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "パスワード再入力",class: "form-control" %>
-      </div>
-
-      <div class="field">
-        <i>(更新確認のため、現在のパスワードを入力して下さい)</i><br />
-        <%= f.password_field :current_password, autocomplete: "off", placeholder: "現在のパスワード", class: "form-control" %>
-      </div>
-
       <div class="actions">
         <%= f.submit "更新", class: "btn btn-primary btn-block" %>
       </div>
