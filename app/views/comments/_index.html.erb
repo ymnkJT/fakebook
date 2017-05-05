@@ -1,7 +1,7 @@
-<ul>
+<ul class="width-ad">
   <% comments.each do |comment| %>
     <% unless comment.id.nil? %>
-      <li>
+      <li class="width-ad">
         <p class="left"><%= comment.user.name %>さんがコメントしました。</p>
         <p class="left"><%= comment.content %></p>
 
