@@ -1,8 +1,4 @@
 Rails.application.routes.draw do
-  get 'relationships/create'
-
-  get 'relationships/destroy'
-
   root 'topics#index'
   devise_for :users, controllers: {
     registrations: "users/registrations",
@@ -14,7 +10,7 @@ Rails.application.routes.draw do
     post :confirm, on: :collection
   end
 
-  resources :users, only: [:index]
+  resources :users, only: [:index, :show]
   resources :relationships, only: [:create, :destroy]
 
   if Rails.env.development?
