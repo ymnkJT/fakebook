@@ -13,16 +13,20 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'capistrano', '3.6.0'
+  gem 'capistrano-bundler'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
+  gem 'capistrano3-unicorn'
 end
 
 group :development do
   gem 'letter_opener_web'
-  gem 'dotenv-rails'
 end
 
 gem 'rails_12factor', group: :production
 
-gem 'therubyracer'
+gem 'therubyracer', platforms: :ruby
 gem 'less-rails', git: 'https://github.com/MustafaZain/less-rails'
 gem 'twitter-bootstrap-rails'
 gem 'devise'
@@ -32,3 +36,5 @@ gem 'omniauth-facebook'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
+gem 'dotenv-rails'
+gem 'unicorn'
